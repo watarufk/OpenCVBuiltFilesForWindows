@@ -1,3 +1,5 @@
+cd ..
+
 rmdir /S /Q opencv_x86
 rmdir /S /Q opencv_x64
 
