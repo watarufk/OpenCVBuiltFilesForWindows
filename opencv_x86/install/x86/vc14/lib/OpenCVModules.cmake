@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_imgproc opencv_video opencv_imgcodecs opencv_videoio opencv_highgui opencv_superres)
+foreach(_expectedTarget opencv_core opencv_imgproc opencv_highgui opencv_video opencv_superres)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -56,17 +56,11 @@ add_library(opencv_core SHARED IMPORTED)
 # Create imported target opencv_imgproc
 add_library(opencv_imgproc SHARED IMPORTED)
 
-# Create imported target opencv_video
-add_library(opencv_video SHARED IMPORTED)
-
-# Create imported target opencv_imgcodecs
-add_library(opencv_imgcodecs SHARED IMPORTED)
-
-# Create imported target opencv_videoio
-add_library(opencv_videoio SHARED IMPORTED)
-
 # Create imported target opencv_highgui
 add_library(opencv_highgui SHARED IMPORTED)
+
+# Create imported target opencv_video
+add_library(opencv_video SHARED IMPORTED)
 
 # Create imported target opencv_superres
 add_library(opencv_superres SHARED IMPORTED)
