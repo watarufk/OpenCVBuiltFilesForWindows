@@ -98,6 +98,7 @@ endif()
 
 
 
+
 # Some additional settings are required if OpenCV is built as static libs
 set(OpenCV_SHARED ON)
 
