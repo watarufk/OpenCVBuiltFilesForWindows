@@ -12,4 +12,4 @@ And this repository contains the "install" folders of them.
 3-clause BSD (<https://github.com/kishimoto-exvision/OpenCVBuiltFilesForWindows/blob/master/LICENSE>)
 
 ## Third Party Libraries
-* OpenCV (3-clause BSD) (<https://github.com/opencv/opencv/blob/master/LICENSE>)
+* OpenCV 3.x (3-clause BSD) (<https://github.com/opencv/opencv/blob/master/LICENSE>)
