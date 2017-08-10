@@ -29,7 +29,7 @@
 #      - OpenCV_VERSION_MAJOR            : Major version part of OpenCV_VERSION: "3"
 #      - OpenCV_VERSION_MINOR            : Minor version part of OpenCV_VERSION: "2"
 #      - OpenCV_VERSION_PATCH            : Patch version part of OpenCV_VERSION: "0"
-#      - OpenCV_VERSION_STATUS           : Development status of this build: "-dev"
+#      - OpenCV_VERSION_STATUS           : Development status of this build: ""
 #
 #    Advanced variables:
 #      - OpenCV_SHARED                   : Use OpenCV as shared library
@@ -50,7 +50,7 @@ SET(OpenCV_VERSION_MAJOR  3)
 SET(OpenCV_VERSION_MINOR  2)
 SET(OpenCV_VERSION_PATCH  0)
 SET(OpenCV_VERSION_TWEAK  0)
-SET(OpenCV_VERSION_STATUS "-dev")
+SET(OpenCV_VERSION_STATUS "")
 
 include(FindPackageHandleStandardArgs)
 
@@ -98,14 +98,13 @@ endif()
 
 
 
-
 # Some additional settings are required if OpenCV is built as static libs
 set(OpenCV_SHARED ON)
 
 # Enables mangled install paths, that help with side by side installs
 set(OpenCV_USE_MANGLED_PATHS FALSE)
 
-set(OpenCV_LIB_COMPONENTS opencv_core;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_superres;opencv_video;opencv_videoio)
+set(OpenCV_LIB_COMPONENTS opencv_calib3d;opencv_core;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_photo;opencv_shape;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_fuzzy;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_xfeatures2d;opencv_ximgproc;opencv_xphoto)
 set(OpenCV_INCLUDE_DIRS "${OpenCV_INSTALL_PATH}/include" "${OpenCV_INSTALL_PATH}/include/opencv")
 
 if(NOT TARGET opencv_core)
